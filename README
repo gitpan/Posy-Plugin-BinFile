@@ -1,12 +1,12 @@
 
 ==== NAME ====
 
-Posy::Plugin::BinFile - Posy plugin to serve (binary) non-entry files
+Posy::Plugin::BinFile - Posy plugin to serve (binary) non-entry files.
 
 
 ==== VERSION ====
 
-This describes version ``0.50'' of Posy::Plugin::BinFile.
+This describes version ``0.60'' of Posy::Plugin::BinFile.
 
 
 ==== DESCRIPTION ====

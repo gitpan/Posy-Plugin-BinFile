@@ -3,15 +3,15 @@ use strict;
 
 =head1 NAME
 
-Posy::Plugin::BinFile - Posy plugin to serve (binary) non-entry files
+Posy::Plugin::BinFile - Posy plugin to serve (binary) non-entry files.
 
 =head1 VERSION
 
-This describes version B<0.50> of Posy::Plugin::BinFile.
+This describes version B<0.60> of Posy::Plugin::BinFile.
 
 =cut
 
-our $VERSION = '0.50';
+our $VERSION = '0.60';
 
 =head1 SYNOPSIS
 
@@ -179,7 +179,7 @@ sub render_page {
 	    }
 	}
 	else {
-	    $self->print_header($flow_state->{content_type});
+	    $self->print_header(content_type=>$flow_state->{content_type});
 	    print $data;
 	}
     }

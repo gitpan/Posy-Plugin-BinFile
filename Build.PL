@@ -8,7 +8,7 @@ my $builder = Module::Build->new(
     dist_author         => 'Kathryn Andersen',
     dist_version_from   => 'lib/Posy/Plugin/BinFile.pm',
 	requires            => {
-	'Posy' => 0.70,
+	'Posy' => 0.80,
 	'Posy::Plugin::FileStats' => 0.40,
 	},
     build_requires => {
