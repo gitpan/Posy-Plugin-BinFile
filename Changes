@@ -1,6 +1,15 @@
 Revision history for Posy-Plugin-BinFile
 ========================================
 
+0.50 Sat 22 January 2005
+------------------------
+
+  * (22 Jan 2005) removed Makefile.PL
+
+  * (22 Jan 2005) print_header
+  	Now uses the 'print_header' method in 'render_page' (to enable
+  play-nicely with Posy::Plugin::CgiCarp).
+
 0.40 Sat 15 January 2005
 ------------------------
 

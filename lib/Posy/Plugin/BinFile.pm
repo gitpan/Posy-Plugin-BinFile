@@ -7,11 +7,11 @@ Posy::Plugin::BinFile - Posy plugin to serve (binary) non-entry files
 
 =head1 VERSION
 
-This describes version B<0.40> of Posy::Plugin::BinFile.
+This describes version B<0.50> of Posy::Plugin::BinFile.
 
 =cut
 
-our $VERSION = '0.40';
+our $VERSION = '0.50';
 
 =head1 SYNOPSIS
 
@@ -40,10 +40,6 @@ as Posy-entry files, you need to give them different extensions.
 
 This plugin replaces a number of methods, adding in code for dealing with
 'file' path-type files.  There is no need to add extra actions.
-
-If one is using the Posy::Plugin::CgiCarp plugin, one must put this plugin
-I<after> it in the plugin list, since CgiCarp redefines the 'render_page'
-method without calling its parent's render_page method.
 
 =head2 Configuration
 
@@ -183,7 +179,7 @@ sub render_page {
 	    }
 	}
 	else {
-	    print 'Content-Type: ', $flow_state->{content_type}, "\n\n";
+	    $self->print_header($flow_state->{content_type});
 	    print $data;
 	}
     }
