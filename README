@@ -1,0 +1,71 @@
+
+==== NAME ====
+
+Posy::Plugin::BinFile - Posy plugin to serve (binary) non-entry files
+
+
+==== VERSION ====
+
+This describes version ``0.40'' of Posy::Plugin::BinFile.
+
+
+==== DESCRIPTION ====
+
+This plugin renders non-entry files (the 'file' path-type), giving the
+correct MIME-type for the requested file -- if the file exists in the data
+directory.
+
+This allows you to (a) integrate existing web-pages into a Posy site by
+putting them into the data_dir(*) (b) include image files alongside entry
+files by putting them in the same directory (and reference them with
+relative paths just as you would normally).
+
+This depends on the FileStats plugin for the MIME-type information for the
+files.
+
+(*) Note that since Posy recognises and processes '.html' and '.txt' files
+by default, if you want such files to be processed as raw files and not as
+Posy-entry files, you need to give them different extensions.
+
+This plugin replaces a number of methods, adding in code for dealing with
+'file' path-type files. There is no need to add extra actions.
+
+If one is using the Posy::Plugin::CgiCarp plugin, one must put this plugin
+*after* it in the plugin list, since CgiCarp redefines the 'render_page'
+method without calling its parent's render_page method.
+
+
+==   Configuration   ==
+
+This expects configuration settings in the $self->{config} hash, which, in
+the default Posy setup, can be defined in the main "config" file in the data
+directory.
+
+``static_file_default_type''
+What is the default MIME type for a file when it can't determine the type?
+(default: "text/plain")
+
+
+==== REQUIRES ====
+
+    Posy
+    Posy::Core
+    Posy::Plugin::FileStats
+
+    Test::More
+
+
+==== AUTHOR ====
+
+    Kathryn Andersen (RUBYKAT)
+    perlkat AT katspace dot com
+    http://www.katspace.com
+
+
+==== COPYRIGHT AND LICENCE ====
+
+Copyright (c) 2004-2005 by Kathryn Andersen
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
