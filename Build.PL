@@ -8,8 +8,8 @@ my $builder = Module::Build->new(
     dist_author         => 'Kathryn Andersen',
     dist_version_from   => 'lib/Posy/Plugin/BinFile.pm',
 	requires            => {
-	'Posy' => 0.90,
-	'Posy::Plugin::FileStats' => 0.50,
+	'Posy' => 0.95,
+	'Posy::Plugin::FileStats' => 0.51,
 	},
     build_requires => {
         'Test::More' => 0,
@@ -17,3 +17,7 @@ my $builder = Module::Build->new(
 );
 
 $builder->create_build_script();
+# create the Makefile.PL
+use Module::Build::Compat;
+print "creating Makefile.PL\n";
+Module::Build::Compat->create_makefile_pl('passthrough', $builder);

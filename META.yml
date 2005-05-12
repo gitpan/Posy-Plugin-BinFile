@@ -1,17 +1,17 @@
 --- #YAML:1.0
 name: Posy-Plugin-BinFile
-version: 0.61
+version: 0.62
 author:
   - Kathryn Andersen
 abstract: Posy plugin to serve (binary) non-entry files.
 license: perl
 requires:
-  Posy: 0.9
-  Posy::Plugin::FileStats: 0.5
+  Posy: 0.95
+  Posy::Plugin::FileStats: 0.51
 build_requires:
   Test::More: 0
 provides:
   Posy::Plugin::BinFile:
     file: lib/Posy/Plugin/BinFile.pm
-    version: 0.61
-generated_by: Module::Build version 0.2607
+    version: 0.62
+generated_by: Module::Build version 0.261
