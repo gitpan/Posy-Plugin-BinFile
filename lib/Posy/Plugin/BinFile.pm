@@ -7,11 +7,11 @@ Posy::Plugin::BinFile - Posy plugin to serve (binary) non-entry files.
 
 =head1 VERSION
 
-This describes version B<0.62> of Posy::Plugin::BinFile.
+This describes version B<0.6201> of Posy::Plugin::BinFile.
 
 =cut
 
-our $VERSION = '0.62';
+our $VERSION = '0.6201';
 
 =head1 SYNOPSIS
 
@@ -114,6 +114,7 @@ sub content_type {
 	    or $flow_state->{content_type} =~ m#^x-system/x-unix.*symbolic link#
 	    or $flow_state->{content_type} =~ m#^application/x-not-regular-file#)
 	{
+	    $self->debug(2, "could not determine content type of " . $self->{path}->{info});
 	    $flow_state->{content_type} = $self->{config}->{static_file_default_type};
 	}
 	

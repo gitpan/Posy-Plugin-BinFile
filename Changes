@@ -1,6 +1,13 @@
 Revision history for Posy-Plugin-BinFile
 ========================================
 
+0.6201 Sat 16 July 2005
+-----------------------
+
+  * (16 Jul 2005) change a warn to a debug
+
+  * (20 Jun 2005) extra warning message
+
 0.62 Thu 12 May 2005
 --------------------
 
